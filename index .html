@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 35</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="superior">
+        <div class="nuevo-libro">
+            <h1>Nuevo libro:</h1>
+            <form id="form-libro">
+                <label for="nombre">Nombre del libro:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="autor">Autor del libro:</label>
+                <input type="text" id="autor" name="autor"><br>
+
+                <label for="genero">Genero del libro:</label>
+                <input type="text" id="genero" name="genero"><br>
+
+                <button type="button" onclick="agregarNuevoLibro()">Agregar libro a su Biblioteca</button>
+            </form>
+            <button type="button" onclick="mostarEstadoBiblioteca()">Mostrar el Estado de mi Biblioteca</button>
+        </div>
+        <div class="administracion-libro">
+            <h1>Administracion de libros:</h1>
+            <form id="form-libro">
+                <label for="librosNoLeidos">Comenzar libro:</label>
+                <select id="librosNoLeidos"></select><br>
+                <button type="button" onclick="comenzarNuevoLibro()">Comenzar a leer este libro</button>
+
+                <label for="finalizarLibro">Finalizar libro:</label>
+                <select id="finalizarLibro"></select><br>
+                <button type="button" onclick="finalizarActualLibro()">Finalizar lectura de este libro</button>
+
+                <label for="proximoLibro">Proximo libro:</label>
+                <select id="proximoLibro"></select><br>
+                <button type="button" onclick="proximoNuevoLibro()">Este sera su proximo libro</button>
+
+            </form>
+        </div>
+    </div>
+    <div class="inferior">
+        <table id="mi-estado">
+            <thead>
+                <tr>
+                    <th>Nombre del Libro</th>
+                    <th>Autor</th>
+                    <th>Genero</th>
+                    <th>Fue Leido?</th>
+                    <th>Leyendo Actualmente?</th>
+                    <th>Proximo a Leer?</th>
+                </tr>
+            </thead>
+            <tbody id="estadoBody">
+            </tbody>
+        </table>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
