@@ -19,13 +19,8 @@ class Biblioteca {
   }
 
   agregarLibro(titulo, genero, autor) {
-    if (this.libros.some(l => { l.titulo == titulo && l.genero == genero && l.autor == autor })) {
-      alert('Este libro ya existe en su biblioteca');
-      return false;
-    } else {
       this.libros.push(new Libro(titulo, genero, autor));
       return true;
-    }
   }
 
   empezarLibro(libro) {
